@@ -1,9 +1,9 @@
 import cors from 'cors';
-import express, { Request, Response } from 'express';
+import express, { Application, Request, Response } from 'express';
 import HttpServer from './HttpServer';
 
 export default class ExpressAdapter implements HttpServer {
-	app: any;
+	private app: Application;
 
 	constructor() {
 		this.app = express();
@@ -12,6 +12,7 @@ export default class ExpressAdapter implements HttpServer {
 	}
 
 	route(method: string, url: string, callback: Function): void {
+		//@ts-ignore
 		this.app[method](url, async function (req: Request, res: Response) {
 			try {
 				const output = await callback(req.params, req.body);
