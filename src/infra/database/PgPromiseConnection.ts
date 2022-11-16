@@ -1,11 +1,14 @@
-import Connection from './Connection';
 import pgp from 'pg-promise';
+import Env from '../util/Env';
+import Connection from './Connection';
 
 export default class PgPromiseConnection implements Connection {
-	connection: any;
+	private connection: pgp.IDatabase<any>;
 
 	constructor() {
-		this.connection = pgp()(process.env.URL_DATABASE!);
+		this.connection = pgp()({
+			connectionString: Env.variable.URL_DATABASE
+		});
 	}
 
 	query(statement: string, params: any): Promise<any> {

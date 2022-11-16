@@ -4,7 +4,7 @@ dotEnv.config({
 	path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env'
 });
 
-export default class Env {
+export default abstract class Env {
 	private static getEnv(varName: string, required = true): string | undefined {
 		const envVar = process.env[varName];
 

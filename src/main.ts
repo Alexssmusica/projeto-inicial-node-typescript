@@ -1,6 +1,6 @@
 import AppController from './infra/controller/AppController';
-import Env from './infra/http/Env';
 import ExpressAdapter from './infra/http/ExpressAdapter';
+import Env from './infra/util/Env';
 
 const http = new ExpressAdapter();
 
