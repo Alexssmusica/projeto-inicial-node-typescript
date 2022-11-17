@@ -306,10 +306,10 @@ array-union@^2.1.0:
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-2.1.0.tgz#b798420adbeb1de828d84acd8a2e23d3efe85e8d"
   integrity sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
 
-assert-options@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/assert-options/-/assert-options-0.7.0.tgz#82c27618d9c0baa5e9da8ef607ee261a44ed6e5e"
-  integrity sha512-7q9uNH/Dh8gFgpIIb9ja8PJEWA5AQy3xnBC8jtKs8K/gNVCr1K6kIvlm59HUyYgvM7oEDoLzGgPcGd9FqhtXEQ==
+assert-options@0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/assert-options/-/assert-options-0.8.0.tgz#cf71882534d23d3027945bc7462e20d3d3682380"
+  integrity sha512-qSELrEaEz4sGwTs4Qh+swQkjiHAysC4rot21+jzXU86dJzNG+FDqBzyS3ohSoTRf4ZLA3FSwxQdiuNl5NXUtvA==
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -1323,12 +1323,12 @@ pg-pool@^3.5.2:
   resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-3.5.2.tgz#ed1bed1fb8d79f1c6fd5fb1c99e990fbf9ddf178"
   integrity sha512-His3Fh17Z4eg7oANLob6ZvH8xIVen3phEZh2QuyrIl4dQSDVEabNducv6ysROKpDNPSD+12tONZVWfSgMvDD9w==
 
-pg-promise@^10.14.0:
-  version "10.14.0"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-10.14.0.tgz#6a00f0c68b6b63a11bca76dfd023694fde12e4d7"
-  integrity sha512-8Gnzgnyo9DB44gTut9B1sQ0aINNnreA6NJjwtZDEj7PDgpj9g6xs+Af3KMXt9OksmPlleFvVb7YwENHSAJVj6g==
+pg-promise@^10.15.0:
+  version "10.15.0"
+  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-10.15.0.tgz#5e89da32715cc983ee68918d956a5bb0e17339d1"
+  integrity sha512-8Nog2y0s7+bGx15d7IQowGIrA/kdQGgdA8Fm+A7KA5uF7OeDu9fw+tosQaQP4uSv8FPvX1Fup9O/Mfq2JNx26Q==
   dependencies:
-    assert-options "0.7.0"
+    assert-options "0.8.0"
     pg "8.8.0"
     pg-minify "1.6.2"
     spex "3.2.0"
