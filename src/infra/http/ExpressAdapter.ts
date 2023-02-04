@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
 import HttpServer from './HttpServer';
+import { Methods } from './types/Types';
 
 export default class ExpressAdapter implements HttpServer {
 	private app: Application;
@@ -11,8 +12,7 @@ export default class ExpressAdapter implements HttpServer {
 		this.app.use(express.json());
 	}
 
-	route(method: string, url: string, callback: Function): void {
-		//@ts-ignore
+	route(method: Methods, url: string, callback: Function): void {
 		this.app[method](url, async function (req: Request, res: Response) {
 			try {
 				const output = await callback(req.params, req.body);
