@@ -1,5 +1,6 @@
 import cors from 'cors';
-import express, { Application, Request, Response } from 'express';
+import express, { Application, NextFunction, Request, Response } from 'express';
+import { AppError } from '../../errors/AppError';
 import HttpServer from './HttpServer';
 import { Methods } from './types/Types';
 
@@ -10,20 +11,33 @@ export default class ExpressAdapter implements HttpServer {
 		this.app = express();
 		this.app.use(cors());
 		this.app.use(express.json());
+		this.app.use((err: Error, _request: Request, response: Response, _next: NextFunction) => {
+			if (err) {
+				if (err instanceof AppError) {
+					return response.status(err.statusCode).json({
+						message: err.message
+					});
+				}
+				return response.status(500).json({
+					status: 'Error',
+					message: `Internal server error ${err.message}`
+				});
+			}
+		});
 	}
 
-	route(method: Methods, url: string, callback: Function): void {
+	route(method: Methods, url: string, callback: Function, status = 200): void {
 		this.app[method](url, async function (req: Request, res: Response) {
 			try {
 				const output = await callback(req.params, req.body);
-				res.json(output);
-			} catch (error) {
-				res.status(500).json({ message: error }).end();
+				res.status(status).json(output);
+			} catch (error: any) {
+				res.status(error.statusCode).json(error).end();
 			}
 		});
 	}
 
 	listen(port: number): void {
-		this.app.listen(port, () => console.log(`Servidor rest iniciado na porta ${port}.`));
+		this.app.listen(port, () => console.log(`🚀 Servidor iniciado na porta ${port}.`));
 	}
 }
