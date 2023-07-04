@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">=18.x"
+    "node": ">=16.x"
   },
   "scripts": {
     "dev": "tsx watch src/main.ts",
@@ -15,6 +15,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "node-nfe-nfce": "^1.0.44",
     "pg-promise": "^11.5.0"
   },
   "devDependencies": {
