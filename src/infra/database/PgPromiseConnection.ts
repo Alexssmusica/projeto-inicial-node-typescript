@@ -6,7 +6,11 @@ export default class PgPromiseConnection implements Connection {
 	private connection: pgp.IDatabase<any>;
 
 	constructor() {
-		this.connection = pgp()({
+		this.connection = pgp({
+			query(e) {
+				console.log(e.query);
+			}
+		})({
 			connectionString: Env.variable.URL_DATABASE
 		});
 	}
