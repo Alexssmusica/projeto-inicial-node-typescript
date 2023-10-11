@@ -29,7 +29,7 @@
     "cors": "^2.8.5",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
     "tsx": "^3.13.0",
