@@ -2353,17 +2353,16 @@ node-forge@^1.3.1:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.1.tgz#be8da2af243b2417d5f646a770663a92b7e9ded3"
   integrity sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==
 
-node-nfe-nfce@^1.0.64:
-  version "1.0.64"
-  resolved "https://registry.yarnpkg.com/node-nfe-nfce/-/node-nfe-nfce-1.0.64.tgz#9ac2e27dd9175137476fbada7818177ae4ab399a"
-  integrity sha512-zIbi3aIYMZ712yPitrJU3Js6z1QFJ+ofF3fQV2p7CqTfeWYGJI8GWK9k7nAZbn6wmH0D9M0CgVMDIvCzK43DeQ==
+node-nfe-nfce@^1.0.65:
+  version "1.0.65"
+  resolved "https://registry.yarnpkg.com/node-nfe-nfce/-/node-nfe-nfce-1.0.65.tgz#d127ce3b8dddbedf7568571dbec7de56eceb9131"
+  integrity sha512-I4JFGNudztHMQmoqJ9bh4EmJBbrmQvPl2XsOFiB9a5CODp0vJ3l10saokOvhO5ctbcmy0zcTq6eg+4iENjC/kA==
   dependencies:
     brazilian-values "^0.12.0"
     bwip-js "^3.4.0"
     date-fns "^2.29.3"
     dotenv "^16.0.3"
     gammautils "^0.0.81"
-    module-alias "^2.2.2"
     node-fetch "^2.6.7"
     node-forge "^1.3.1"
     pdfkit "^0.13.0"
