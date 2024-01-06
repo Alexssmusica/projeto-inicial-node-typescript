@@ -2353,10 +2353,10 @@ node-forge@^1.3.1:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.1.tgz#be8da2af243b2417d5f646a770663a92b7e9ded3"
   integrity sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==
 
-node-nfe-nfce@^1.0.65:
-  version "1.0.65"
-  resolved "https://registry.yarnpkg.com/node-nfe-nfce/-/node-nfe-nfce-1.0.65.tgz#d127ce3b8dddbedf7568571dbec7de56eceb9131"
-  integrity sha512-I4JFGNudztHMQmoqJ9bh4EmJBbrmQvPl2XsOFiB9a5CODp0vJ3l10saokOvhO5ctbcmy0zcTq6eg+4iENjC/kA==
+node-nfe-nfce@^1.0.66:
+  version "1.0.66"
+  resolved "https://registry.yarnpkg.com/node-nfe-nfce/-/node-nfe-nfce-1.0.66.tgz#cec043888273727c3c74912b5a7c62391d78c8a9"
+  integrity sha512-LYy8xxdc3DA+4gqpK+DH5EQxoVoO0YgJYo9Wnn/PD3yDtMz2EFrZyM8apVwVZGWPyAKOPJBrdQuqJbQV+E3IGg==
   dependencies:
     brazilian-values "^0.12.0"
     bwip-js "^3.4.0"
