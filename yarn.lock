@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@alexssmusica/node-pdf-nfe@^1.0.58":
-  version "1.0.58"
-  resolved "https://registry.yarnpkg.com/@alexssmusica/node-pdf-nfe/-/node-pdf-nfe-1.0.58.tgz#65116414fe41e388d439f7a2d36f3894169eb8ca"
-  integrity sha512-f/Nhhox5aUcXD2W7Q6DG4t2s7JYNvdLC8IKCLFCW9f4T0muc6fG+SZqalW1Z5KyzDdKhjK6OtR6Y07/s3LfGoQ==
+"@alexssmusica/node-pdf-nfe@^1.0.59":
+  version "1.0.59"
+  resolved "https://registry.yarnpkg.com/@alexssmusica/node-pdf-nfe/-/node-pdf-nfe-1.0.59.tgz#f69fd5db83d1a56834da1a2ef0d8a7a54e6b3d0e"
+  integrity sha512-fOEOT9cOkPtd0lTfmBaq3fPpREKtwMeDKbBNJkwatfrSgp7Y5KYOhUcx7ufOYbKOSlxQ6KJceyv/pJYt/T7Btw==
   dependencies:
     brazilian-values "^0.12.0"
     bwip-js "^3.4.0"
