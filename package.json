@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@alexssmusica/node-pdf-nfe": "^1.0.59",
-    "dotenv": "^16.4.3",
+    "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "node-nfe-nfce": "^1.0.67",
     "pg-promise": "^11.5.4"
