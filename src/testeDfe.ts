@@ -14,7 +14,6 @@ const distribuicao = new DistribuicaoDFe({
 	pfx,
 	passphrase: '3411',
 	cnpj: '05333353000127',
-	cUFAutor: '41',
 	tpAmb: '2'
 });
 
