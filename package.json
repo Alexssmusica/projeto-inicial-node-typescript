@@ -18,7 +18,7 @@
     "express": "^4.19.1",
     "node-mde": "^0.14.8",
     "node-nfe-nfce": "^1.0.67",
-    "pg-promise": "^11.5.4"
+    "pg-promise": "^11.5.5"
   },
   "devDependencies": {
     "@swc/core": "^1.4.8",
