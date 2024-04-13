@@ -17,7 +17,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "node-mde": "^0.14.8",
-    "node-nfe-nfce": "^1.0.68",
+    "node-nfe-nfce": "^1.0.69",
     "pg-promise": "^11.6.0"
   },
   "devDependencies": {
