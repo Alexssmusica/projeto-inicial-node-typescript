@@ -1,5 +1,6 @@
 import AppController from './infra/controller/AppController';
 import ExpressAdapter from './infra/http/ExpressAdapter';
+import { setPostgresTypes } from './infra/util/DataBase';
 import Env from './infra/util/Env';
 
 import cluster from 'cluster';
@@ -17,6 +18,7 @@ if (cluster.isPrimary) {
 		cluster.fork();
 	});
 } else {
+	setPostgresTypes();
 	const http = new ExpressAdapter();
 
 	new AppController(http);

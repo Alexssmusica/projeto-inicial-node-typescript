@@ -1,0 +1,25 @@
+services:
+    postgres:
+        image: postgres:14.11
+        container_name: app-pg
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: doker
+            POSTGRES_PASSWORD: doker
+            POSTGRES_DB: doker
+        volumes:
+            - pgdata:/var/lib/postgresql/data/
+
+    cache:
+        image: redis
+        container_name: app-cache
+        ports:
+            - 6379:6379
+        volumes:
+            - redis:/data
+
+volumes:
+    pgdata:
+    redis:

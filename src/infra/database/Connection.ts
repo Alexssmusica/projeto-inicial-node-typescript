@@ -1,4 +1,4 @@
 export default interface Connection {
-	query(statement: string, params: any): Promise<any>;
+	query<T>(statement: string, params: any[]): Promise<T>;
 	close(): Promise<void>;
 }

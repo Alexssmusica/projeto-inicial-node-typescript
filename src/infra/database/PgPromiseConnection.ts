@@ -15,7 +15,7 @@ export default class PgPromiseConnection implements Connection {
 		});
 	}
 
-	query(statement: string, params: any): Promise<any> {
+	query<T = any>(statement: string, params: any[]): Promise<T> {
 		return this.connection.query(statement, params);
 	}
 

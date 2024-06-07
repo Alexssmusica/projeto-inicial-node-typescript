@@ -13,11 +13,8 @@
     "start": "node dist/main.js"
   },
   "dependencies": {
-    "@alexssmusica/node-pdf-nfe": "^1.0.59",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "node-mde": "^0.14.9",
-    "node-nfe-nfce": "^1.0.73",
     "pg-promise": "^11.7.8"
   },
   "devDependencies": {
@@ -25,6 +22,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.13",
+    "@types/pg": "^8.11.6",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "cors": "^2.8.5",
