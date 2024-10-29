@@ -22,7 +22,7 @@
     "@swc/core": "^1.7.39",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.7.9",
+    "@types/node": "^22.8.2",
     "@types/pg": "^8.11.10",
     "@typescript-eslint/eslint-plugin": "^8.11.0",
     "@typescript-eslint/parser": "^8.11.0",
