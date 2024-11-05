@@ -25,7 +25,7 @@
     "@types/node": "^22.9.0",
     "@types/pg": "^8.11.10",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
-    "@typescript-eslint/parser": "^8.12.2",
+    "@typescript-eslint/parser": "^8.13.0",
     "cors": "^2.8.5",
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
