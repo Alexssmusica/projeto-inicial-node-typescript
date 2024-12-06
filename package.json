@@ -15,7 +15,7 @@
   "dependencies": {
     "@alexssmusica/node-pdf-nfe": "^1.1.8",
     "dotenv": "^16.4.7",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "pg-promise": "^11.10.2"
   },
   "devDependencies": {
