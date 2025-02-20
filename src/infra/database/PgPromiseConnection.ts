@@ -1,9 +1,11 @@
+import type { IDatabase } from 'pg-promise';
 import pgp from 'pg-promise';
+import type { IClient } from 'pg-promise/typescript/pg-subset';
 import Env from '../util/Env';
-import Connection from './Connection';
+import type Connection from './Connection';
 
 export default class PgPromiseConnection implements Connection {
-	private connection: pgp.IDatabase<any>;
+	private connection: IDatabase<object, IClient>;
 
 	constructor() {
 		this.connection = pgp({

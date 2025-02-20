@@ -1,19 +1,19 @@
-import { types } from 'pg';
+import pg from 'pg';
 class DataBase {
 	setPostgresTypes(): void {
-		types.setTypeParser(types.builtins.INT2, function (val: any) {
+		pg.types.setTypeParser(pg.types.builtins.INT2, function (val: string) {
 			return parseInt(val);
 		});
-		types.setTypeParser(types.builtins.INT4, function (val: any) {
+		pg.types.setTypeParser(pg.types.builtins.INT4, function (val: string) {
 			return parseInt(val);
 		});
-		types.setTypeParser(types.builtins.INT8, function (val: any) {
+		pg.types.setTypeParser(pg.types.builtins.INT8, function (val: string) {
 			return parseInt(val);
 		});
-		types.setTypeParser(types.builtins.NUMERIC, function (val: any) {
+		pg.types.setTypeParser(pg.types.builtins.NUMERIC, function (val: string) {
 			return parseFloat(val);
 		});
 	}
 }
 
-export const setPostgresTypes = new DataBase().setPostgresTypes;
+export const setPostgresTypes = () => new DataBase().setPostgresTypes();

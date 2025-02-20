@@ -36,7 +36,7 @@ export default abstract class Env {
 	}
 
 	static variable = {
-		PORT: this.getEnvNumber('PORT'),
+		PORT: this.getEnvNumber('PORT', false),
 		URL_DATABASE: this.getEnvString('URL_DATABASE', false)
 	};
 }

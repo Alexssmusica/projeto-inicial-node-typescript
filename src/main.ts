@@ -1,10 +1,10 @@
+import cluster from 'node:cluster';
+import { cpus } from 'node:os';
 import AppController from './infra/controller/AppController';
 import ExpressAdapter from './infra/http/ExpressAdapter';
 import { setPostgresTypes } from './infra/util/DataBase';
 import Env from './infra/util/Env';
 
-import cluster from 'cluster';
-import { cpus } from 'os';
 const numOfCPUs = cpus().length;
 if (cluster.isPrimary) {
 	console.log(`Processo principal criado: ${process.pid}`);
@@ -13,7 +13,12 @@ if (cluster.isPrimary) {
 		console.log(`Criando processo filho: ${i}...`);
 		cluster.fork();
 	}
-	cluster.on('exit', (worker, code, signal) => {
+
+	cluster.on('online', (worker) => {
+		console.log(`Processo ${worker.process.pid} online`);
+	});
+
+	cluster.on('exit', (worker) => {
 		console.log(`Processo ${worker.process.pid} finalizado`);
 		cluster.fork();
 	});
@@ -23,5 +28,5 @@ if (cluster.isPrimary) {
 
 	new AppController(http);
 
-	http.listen(Env.variable.PORT);
+	http.listen(Env.variable.PORT || 3000);
 }
