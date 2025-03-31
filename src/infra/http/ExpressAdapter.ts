@@ -18,18 +18,19 @@ export default class ExpressAdapter implements HttpServer {
 		this.app[method](url, async function (req: Request, res: Response, next: NextFunction) {
 			try {
 				const output = await callback(req.params, req.body);
-				res.status(status).json(output);
+				if (output) {
+					res.status(status).json(output);
+				} else {
+					res.sendStatus(status);
+				}
 			} catch (error) {
 				next(error);
 			}
 		});
 	}
 
-	setupErrorHandler(): void {
-		this.app.use(expressErrorMiddleware);
-	}
-
 	listen(port: number): void {
+		this.app.use(expressErrorMiddleware);
 		this.app.listen(port, () => console.log(`🚀 Servidor iniciado na porta ${port}.`));
 	}
 }

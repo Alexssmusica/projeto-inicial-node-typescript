@@ -27,6 +27,5 @@ if (cluster.isPrimary) {
 	const http = new ExpressAdapter();
 
 	new AppController(http);
-	http.setupErrorHandler();
 	http.listen(Env.variable.PORT || 3000);
 }
