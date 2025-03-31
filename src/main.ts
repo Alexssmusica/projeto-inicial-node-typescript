@@ -1,9 +1,9 @@
 import cluster from 'node:cluster';
 import { cpus } from 'node:os';
 import AppController from './infra/controller/AppController';
+import { setPostgresTypes } from './infra/helpers/DataBase';
+import Env from './infra/helpers/Env';
 import ExpressAdapter from './infra/http/ExpressAdapter';
-import { setPostgresTypes } from './infra/util/DataBase';
-import Env from './infra/util/Env';
 
 const numOfCPUs = cpus().length;
 if (cluster.isPrimary) {
@@ -27,6 +27,6 @@ if (cluster.isPrimary) {
 	const http = new ExpressAdapter();
 
 	new AppController(http);
-
+	http.setupErrorHandler();
 	http.listen(Env.variable.PORT || 3000);
 }

@@ -1,7 +1,7 @@
 import type { IDatabase } from 'pg-promise';
 import pgp from 'pg-promise';
 import type { IClient } from 'pg-promise/typescript/pg-subset';
-import Env from '../util/Env';
+import Env from '../helpers/Env';
 import type Connection from './Connection';
 
 export default class PgPromiseConnection implements Connection {
