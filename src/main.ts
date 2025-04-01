@@ -3,7 +3,7 @@ import { cpus } from 'node:os';
 import AppController from './infra/controller/AppController';
 import { setPostgresTypes } from './infra/helpers/DataBase';
 import Env from './infra/helpers/Env';
-import ExpressAdapter from './infra/http/ExpressAdapter';
+import FastifyAdapter from './infra/http/FastifyAdapter';
 
 const numOfCPUs = cpus().length;
 if (cluster.isPrimary) {
@@ -24,7 +24,8 @@ if (cluster.isPrimary) {
 	});
 } else {
 	setPostgresTypes();
-	const http = new ExpressAdapter();
+	// const http = new ExpressAdapter();
+	const http = new FastifyAdapter();
 
 	new AppController(http);
 	http.listen(Env.variable.PORT || 3000);

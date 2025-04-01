@@ -30,7 +30,7 @@ export default class ExpressAdapter implements HttpServer {
 	}
 
 	listen(port: number): void {
-		this.app.use(expressErrorMiddleware);
+		this.app.use(expressErrorMiddleware as any);
 		this.app.listen(port, () => console.log(`🚀 Servidor iniciado na porta ${port}.`));
 	}
 }
