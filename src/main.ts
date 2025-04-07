@@ -2,7 +2,7 @@ import cluster from 'node:cluster';
 import { cpus } from 'node:os';
 import AppController from './infra/controller/AppController';
 import { setPostgresTypes } from './infra/helpers/DataBase';
-import Env from './infra/helpers/Env';
+import { env } from './infra/helpers/Env';
 import FastifyAdapter from './infra/http/FastifyAdapter';
 
 const numOfCPUs = cpus().length;
@@ -28,5 +28,5 @@ if (cluster.isPrimary) {
 	const http = new FastifyAdapter();
 
 	new AppController(http);
-	http.listen(Env.variable.PORT || 3000);
+	http.listen(env.PORT || 3000);
 }
