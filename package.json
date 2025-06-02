@@ -24,7 +24,7 @@
     "@types/cors": "^2.8.18",
     "@types/express": "5.0.2",
     "@types/node": "^22.15.27",
-    "@types/pg": "^8.15.2",
+    "@types/pg": "^8.15.4",
     "cors": "^2.8.5",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
