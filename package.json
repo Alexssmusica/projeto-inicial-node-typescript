@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.18",
     "@types/express": "5.0.2",
-    "@types/node": "^22.15.29",
+    "@types/node": "^22.15.30",
     "@types/pg": "^8.15.4",
     "cors": "^2.8.5",
     "eslint": "^9.28.0",
