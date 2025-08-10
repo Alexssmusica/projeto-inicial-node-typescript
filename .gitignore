@@ -2,3 +2,5 @@ node_modules/
 dist/
 .env
 *.pfx
+src/teste.ts
+src/*.pdf
